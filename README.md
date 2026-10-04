@@ -2,7 +2,7 @@
 
 **P**rivacy **F**ocused **F**inance **T**racker. A personal finance tracker for India. An iPhone app reads bank SMS (ICICI, Axis), files each transaction into a category and asks you only when it isn't sure. The model that does the filing is open-weight and runs on a Mac at home, so no AI company sees your spending.
 
-[Watch the demo](media/demo.mp4)
+https://github.com/user-attachments/assets/09ba2353-03a1-4fe8-aa33-bf7e7eacd278
 
 ## How it works
 
