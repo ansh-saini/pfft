@@ -1,0 +1,48 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "deploy:prod": "vercel deploy --prod",
+    "tag:untagged": "tsx scripts/tag-untagged.ts",
+    "tag:queue": "tsx scripts/tag-queue.ts",
+    "backfill": "tsx scripts/backfill.ts",
+    "backfill:buckets": "tsx scripts/backfill-buckets.ts",
+    "backfill:merchants": "tsx scripts/backfill-merchants.ts",
+    "backfill:balances": "tsx scripts/backfill-balances.ts",
+    "backfill:rules": "tsx scripts/backfill-mapping-buckets.ts",
+    "reconcile": "tsx scripts/reconcile-statements.ts",
+    "audit:data": "tsx scripts/audit-transactions.ts",
+    "db:push": "dotenv -e .env.local -- supabase db push",
+    "db:pull": "dotenv -e .env.local -- supabase db pull",
+    "db:new": "supabase migration new",
+    "db:list": "dotenv -e .env.local -- supabase migration list",
+    "supabase": "supabase",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.106.2",
+    "next": "16.2.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "server-only": "^0.0.1",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vercel/node": "^5.8.2",
+    "dotenv-cli": "^11.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.1",
+    "supabase": "^2.100.1",
+    "tsx": "^4.22.3",
+    "typescript": "^5",
+    "vitest": "^4.1.7"
+  }
+}
